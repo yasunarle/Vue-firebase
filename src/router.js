@@ -1,12 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+// Views
 import Home from './views/Home.vue'
 import firestore from './views/Firestore.vue'
-// Adding
+import Shunta from './views/Shunta.vue'
 import Stripe from './views/Stripe.vue'
+import Scss from './views/Scss.vue'
+
+// Componets
 import Signup from '@/components/Signup'
 import Signin from '@/components/Signin'
+
 // import firebase from 'firebase'
+
 Vue.use(Router)
 
 export default new Router({
@@ -50,7 +56,18 @@ export default new Router({
       path: '/firestore',
       name: 'Firestore',
       component: firestore
-    }        
+    },
+    {
+      path: '/shunta',
+      name: 'Shunta',
+      component: Shunta
+    },    
+    {
+      path: '/scss',
+      name: 'Scss',
+      component: Scss
+    },
+
   ]
 })
 

@@ -1,7 +1,7 @@
 <template>
   <div class="stripe">
     <p>Stripe page</p>
-    <a href="" @click="stripe" class="button--grey">Stripe</a> 
+    <a @click="stripe" class="button--grey">Stripe</a> 
   </div>
 </template>
 
