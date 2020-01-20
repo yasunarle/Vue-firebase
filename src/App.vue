@@ -11,6 +11,7 @@
         <router-link to="/signup">Signup</router-link>
       </div>
     </div>
+    <!-- Router -->
     <router-view/>
   </div>
 </template>
