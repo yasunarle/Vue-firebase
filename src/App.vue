@@ -1,13 +1,14 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/database">DB</router-link> |
+    <div class="header">      
+      <router-link to="/">Home</router-link> 
+      <router-link to="/database">DB</router-link> 
+      <!-- header if log in...  -->
       <div v-if = "user.uid" class = "login">
-        <button type="button" @click="doLogout">ログアウト</button>
+        <a @click="doLogout">LogOut</a>  
       </div>
       <div v-else class = "not_log_in">
-        <router-link to="/signin">Login</router-link> |
+        <router-link to="/signin">Login</router-link>
         <router-link to="/signup">Signup</router-link>
       </div>
     </div>
@@ -46,13 +47,13 @@ export default {
   },
   methods: {
     doLogout() {
-      firebase.auth().signOut()
+      firebase.auth().signOut()      
     },    
   }
 } 
 </script>  
 
-<style>
+<style lang="scss">
 body{
   margin: 0;
 }
@@ -63,22 +64,18 @@ body{
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  
+.header {  
   padding: 10px;
   background: #5c5f6e;
+  a {
+    
+    font-weight: bold;
+    color: #2c3e50;
+   
+  }
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
+.router-link-exact-active {
   color: #42b983;
-}
-.not_log_in, .login{
-  display: inline-block;
 }
 .text_form{
   border: 2px solid #42b983;

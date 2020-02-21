@@ -6,6 +6,7 @@ import firestore from './views/Firestore.vue'
 import Shunta from './views/Shunta.vue'
 import Stripe from './views/Stripe.vue'
 import Scss from './views/Scss.vue'
+import Shun from './views/Shun.vue'
 
 // Componets
 import Signup from '@/components/Signup'
@@ -67,6 +68,11 @@ export default new Router({
       name: 'Scss',
       component: Scss
     },
+    {
+      path: '/shun',
+      name: 'Shun',
+      component: Shun
+    },    
 
   ]
 })
