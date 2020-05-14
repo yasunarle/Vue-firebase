@@ -18,9 +18,9 @@ export default {
       items:{}
     }
   },
-  firestore:{
-    items: db.collection('items')
-  },  
+  // firestore:{
+  //   items: db.collection('items')
+  // },  
   methods:{
     sendStore(){
       db.collection('items').add({name: this.inputText})

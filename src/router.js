@@ -5,8 +5,9 @@ import Home from './views/Home.vue'
 import firestore from './views/Firestore.vue'
 import Shunta from './views/Shunta.vue'
 import Stripe from './views/Stripe.vue'
-import Scss from './views/Scss.vue'
 import Shun from './views/Shun.vue'
+import Storage from './views/Storage.vue'
+import Gio from './views/Gio.vue'
 
 // Componets
 import Signup from '@/components/Signup'
@@ -64,15 +65,20 @@ export default new Router({
       component: Shunta
     },    
     {
-      path: '/scss',
-      name: 'Scss',
-      component: Scss
-    },
-    {
       path: '/shun',
       name: 'Shun',
       component: Shun
     },    
+    {
+      path: '/storage',
+      name: 'Storage',
+      component: Storage
+    },        
+    {
+      path: '/gio',
+      name: 'Gio',
+      component: Gio
+    },            
 
   ]
 })
