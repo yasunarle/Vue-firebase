@@ -1,88 +1,99 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from "vue";
+import Router from "vue-router";
 // Views
-import Home from './views/Home.vue'
-import firestore from './views/Firestore.vue'
-import Shunta from './views/Shunta.vue'
-import Stripe from './views/Stripe.vue'
-import Shun from './views/Shun.vue'
-import Storage from './views/Storage.vue'
-import Gio from './views/Gio.vue'
+import Home from "./views/Home.vue";
+import firestore from "./views/Firestore.vue";
+import Shunta from "./views/Shunta.vue";
+import Stripe from "./views/Stripe.vue";
+import Shun from "./views/Shun.vue";
+import Storage from "./views/Storage.vue";
+import Gio from "./views/Gio.vue";
+import Post from "./views/Post.vue";
+import Tick from "./views/Tick.vue";
 
 // Componets
-import Signup from '@/components/Signup'
-import Signin from '@/components/Signin'
+import Signup from "@/components/Signup";
+import Signin from "@/components/Signin";
 
 // import firebase from 'firebase'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '*',
-      redirect: 'signin'
-    },    
-    {
-      path: '/',
-      name: 'home',
-      component: Home,
-      meta: { requiresAuth: true }
+      path: "*",
+      redirect: "signin",
     },
     {
-      path: '/stripe',
-      name: 'stripe',
-      component: Stripe,
-    },    
+      path: "/",
+      name: "home",
+      component: Home,
+      meta: { requiresAuth: true },
+    },
     {
-      path: '/database',
-      name: 'database',
+      path: "/stripe",
+      name: "stripe",
+      component: Stripe,
+    },
+    {
+      path: "/database",
+      name: "database",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/Database.vue')
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Database.vue"),
     },
     {
-      path: '/signup',
-      name: 'Signup',
-      component: Signup
+      path: "/signup",
+      name: "Signup",
+      component: Signup,
     },
     {
-      path: '/signin',
-      name: 'Signin',
-      component: Signin
+      path: "/signin",
+      name: "Signin",
+      component: Signin,
     },
     {
-      path: '/firestore',
-      name: 'Firestore',
-      component: firestore
+      path: "/firestore",
+      name: "Firestore",
+      component: firestore,
     },
     {
-      path: '/shunta',
-      name: 'Shunta',
-      component: Shunta
-    },    
+      path: "/shunta",
+      name: "Shunta",
+      component: Shunta,
+    },
     {
-      path: '/shun',
-      name: 'Shun',
-      component: Shun
-    },    
+      path: "/shun",
+      name: "Shun",
+      component: Shun,
+    },
     {
-      path: '/storage',
-      name: 'Storage',
-      component: Storage
-    },        
+      path: "/storage",
+      name: "Storage",
+      component: Storage,
+    },
     {
-      path: '/gio',
-      name: 'Gio',
-      component: Gio
-    },            
-
-  ]
-})
-
+      path: "/gio",
+      name: "Gio",
+      component: Gio,
+    },
+    {
+      path: "/post/:id",
+      name: "Post",
+      component: Post,
+    },
+    {
+      path: "/tick",
+      name: "tick",
+      component: Tick,
+    },
+  ],
+});
 
 // Router.beforeEach((to, from, next) => {
 //   const requiresAuth = to.matched.some(record => record.meta.requiresAuth)

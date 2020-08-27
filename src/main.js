@@ -16,16 +16,18 @@ Vue.config.productionTip = false
 Vue.use(firestorePlugin)
 Vue.use(BootstrapVue)
 
-// firebase config ---
+// Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyBMbyOJesAwUZzvV8PuiW_wp0BdnoJ5Wfk",
-  authDomain: "identimal5.firebaseapp.com",
-  databaseURL: "https://identimal5.firebaseio.com",
-  projectId: "identimal5",
-  storageBucket: "identimal5.appspot.com",
-  messagingSenderId: "364343127920",
-  appId: "1:364343127920:web:e3e57b8fa7b05548"
+  apiKey: "AIzaSyAeyX-XeQTnO38l3oScZeSqIdJsOUzvrBY",
+  authDomain: "ex-vue-be4d7.firebaseapp.com",
+  databaseURL: "https://ex-vue-be4d7.firebaseio.com",
+  projectId: "ex-vue-be4d7",
+  storageBucket: "ex-vue-be4d7.appspot.com",
+  messagingSenderId: "118975470",
+  appId: "1:118975470:web:73184711670534bb0bfcff",
+  measurementId: "G-0Q6W1F9KW7"
 };
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 export const db = firebase.firestore()
 

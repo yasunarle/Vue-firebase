@@ -67,11 +67,9 @@ body{
 .header {  
   padding: 10px;
   background: #5c5f6e;
-  a {
-    
+  a {    
     font-weight: bold;
-    color: #2c3e50;
-   
+    color: #2c3e50;   
   }
 }
 .router-link-exact-active {

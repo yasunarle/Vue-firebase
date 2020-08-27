@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <router-link v-bind:to="{ name : 'Post', params : { id: post.id }}"></router-link>
     <img alt="Vue logo" src="../assets/logo.png">
     <div class="" v-if = "user.uid">
       <h1>がっつり:{{ user.email }}:ログイン中</h1>  
@@ -48,7 +49,10 @@ export default {
       imageUrl: '',
       image: null,
       key: 'testzkoetnafoejraa',
-      ext: ''
+      ext: '',
+      post:{
+        id: 123
+      }
     }
   },
   created() {
