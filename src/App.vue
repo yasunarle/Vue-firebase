@@ -12,11 +12,13 @@
         <router-link to="/signup">Signup</router-link>
       </div>
     </div>
+    <div>
+      <t-toggle />
+    </div>
     <!-- Router -->
     <router-view />
   </div>
 </template>
-
 
 <script>
 // firebase モジュール
@@ -50,7 +52,7 @@ export default {
     },
   },
 };
-</script>  
+</script>
 
 <style>
 body {
@@ -81,4 +83,3 @@ body {
   margin: auto;
 }
 </style>
-
